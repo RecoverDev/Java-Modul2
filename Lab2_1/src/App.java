@@ -23,8 +23,10 @@ public class App {
             ResultSet result = cmd.executeQuery(sql);
 
             while(result.next()){
-                System.out.printf("%s \t %d\n", result.getString("title"),result.getInt("length"));
+                System.out.printf("%-50s \t %d\n", result.getString("title"),result.getInt("length"));
             }
+
+            result.close();
 
         }
         
